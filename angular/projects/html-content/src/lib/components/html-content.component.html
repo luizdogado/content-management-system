@@ -1,0 +1,32 @@
+  <!-- <form class="content-form" (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" [(ngModel)]="content.title" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="body">Body:</label>
+      <textarea id="body" name="body" [(ngModel)]="content.body" required></textarea>
+    </div>
+  
+    <button type="submit">Salvar</button>
+  </form> -->
+
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+        <div class="col col-md-6">
+          <h5 class="card-title">
+            {{ '::Content Pages' | abpLocalization }}
+          </h5>
+        </div>
+        <div class="text-end col col-md-6"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <ngx-datatable [rows]="myEntities.items" [count]="myEntities.totalCount" [list]="list" default>
+        <ngx-datatable-column [name]="'::Id' | abpLocalization" prop="id"></ngx-datatable-column>
+        <ngx-datatable-column [name]="'::Name' | abpLocalization" prop="name"></ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>

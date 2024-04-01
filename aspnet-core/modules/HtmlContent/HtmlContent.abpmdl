@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "HtmlContent.Domain.Shared": {
+      "path": "src/HtmlContent.Domain.Shared/HtmlContent.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.Domain": {
+      "path": "src/HtmlContent.Domain/HtmlContent.Domain.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.Application.Contracts": {
+      "path": "src/HtmlContent.Application.Contracts/HtmlContent.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.Application": {
+      "path": "src/HtmlContent.Application/HtmlContent.Application.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.EntityFrameworkCore": {
+      "path": "src/HtmlContent.EntityFrameworkCore/HtmlContent.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.MongoDB": {
+      "path": "src/HtmlContent.MongoDB/HtmlContent.MongoDB.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.HttpApi": {
+      "path": "src/HtmlContent.HttpApi/HtmlContent.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.HttpApi.Client": {
+      "path": "src/HtmlContent.HttpApi.Client/HtmlContent.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.TestBase": {
+      "path": "test/HtmlContent.TestBase/HtmlContent.TestBase.abppkg",
+      "folder": "test"
+    },
+    "HtmlContent.EntityFrameworkCore.Tests": {
+      "path": "test/HtmlContent.EntityFrameworkCore.Tests/HtmlContent.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "HtmlContent.MongoDB.Tests": {
+      "path": "test/HtmlContent.MongoDB.Tests/HtmlContent.MongoDB.Tests.abppkg",
+      "folder": "test"
+    },
+    "HtmlContent.Domain.Tests": {
+      "path": "test/HtmlContent.Domain.Tests/HtmlContent.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "HtmlContent.Application.Tests": {
+      "path": "test/HtmlContent.Application.Tests/HtmlContent.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "HtmlContent.HttpApi.Host": {
+      "path": "host/HtmlContent.HttpApi.Host/HtmlContent.HttpApi.Host.abppkg",
+      "folder": "host"
+    },
+    "HtmlContent.Web": {
+      "path": "src/HtmlContent.Web/HtmlContent.Web.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/HtmlContent.HttpApi.Client.ConsoleTestApp/HtmlContent.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "HtmlContent.Web.Host": {
+      "path": "host/HtmlContent.Web.Host/HtmlContent.Web.Host.abppkg",
+      "folder": "host"
+    },
+    "HtmlContent.AuthServer": {
+      "path": "host/HtmlContent.AuthServer/HtmlContent.AuthServer.abppkg",
+      "folder": "host"
+    },
+    "HtmlContent.Host.Shared": {
+      "path": "host/HtmlContent.Host.Shared/HtmlContent.Host.Shared.abppkg",
+      "folder": "host"
+    },
+    "HtmlContent.Web.Unified": {
+      "path": "host/HtmlContent.Web.Unified/HtmlContent.Web.Unified.abppkg",
+      "folder": "host"
+    },
+    "HtmlContent.Blazor": {
+      "path": "src/HtmlContent.Blazor/HtmlContent.Blazor.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.Blazor.Host": {
+      "path": "host/HtmlContent.Blazor.Host/HtmlContent.Blazor.Host.abppkg",
+      "folder": "host"
+    },
+    "HtmlContent.Blazor.Server": {
+      "path": "src/HtmlContent.Blazor.Server/HtmlContent.Blazor.Server.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.Blazor.WebAssembly": {
+      "path": "src/HtmlContent.Blazor.WebAssembly/HtmlContent.Blazor.WebAssembly.abppkg",
+      "folder": "src"
+    },
+    "HtmlContent.Blazor.Server.Host": {
+      "path": "host/HtmlContent.Blazor.Server.Host/HtmlContent.Blazor.Server.Host.abppkg",
+      "folder": "host"
+    }
+  }
+}

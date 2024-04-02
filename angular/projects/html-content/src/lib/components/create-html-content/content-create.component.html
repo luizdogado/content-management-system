@@ -1,0 +1,8 @@
+<form [formGroup]="contentForm" (ngSubmit)="onSubmit()">
+    <input type="number" id="id" formControlName="id" disabled hidden>
+    <label for="name">Title:</label>
+    <input type="text" id="name" formControlName="name">
+    <label for="content">Content:</label>
+    <textarea id="content" formControlName="content"></textarea>
+    <button type="submit">Save</button>
+</form>

@@ -3,6 +3,7 @@ import { RouterOutletComponent } from '@abp/ng.core';
 import { Routes, RouterModule } from '@angular/router';
 import { HtmlContentComponent } from './components/html-content.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContentViewComponent } from './components/view-html-content/content-view.component';
 const routes: Routes = [
   {
     path: '',
@@ -14,7 +15,7 @@ const routes: Routes = [
         component: HtmlContentComponent,
       },
     ],
-  },
+  }
 ];
 
 @NgModule({

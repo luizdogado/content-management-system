@@ -18,6 +18,7 @@ import { FeatureManagementModule } from '@abp/ng.feature-management';
 import { AbpOAuthModule } from '@abp/ng.oauth';
 import { ThemeBasicModule } from '@abp/ng.theme.basic';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    NgbModule,
     CoreModule.forRoot({
       environment,
       registerLocaleFn: registerLocale(),

@@ -4,21 +4,19 @@ import { ThemeSharedModule } from '@abp/ng.theme.shared';
 import { HtmlContentComponent } from './components/html-content.component';
 import { HtmlContentRoutingModule } from './html-content-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CreateHtmlContentComponent } from './components/create-html-content/content-create.component';
 
 
 @NgModule({
-  declarations: [HtmlContentComponent],
+  declarations: [HtmlContentComponent, CreateHtmlContentComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
-    CoreModule, 
+    CoreModule,
     ThemeSharedModule, 
     HtmlContentRoutingModule,
     ReactiveFormsModule,
-    // BrowserModule,
-    // FormsModule,
-    //CKEditorModule
   ],
-  exports: [HtmlContentComponent],
+  exports: [HtmlContentComponent, CreateHtmlContentComponent],
 })
 export class HtmlContentModule {
   static forChild(): ModuleWithProviders<HtmlContentModule> {

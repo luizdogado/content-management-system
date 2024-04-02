@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateHtmlContentComponent } from 'projects/html-content/src/lib/components/create-html-content/content-create.component';
+import { ContentViewComponent } from 'projects/html-content/src/lib/components/view-html-content/content-view.component';
 
 const routes: Routes = [
     {
@@ -31,6 +33,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('@abp/ng.setting-management').then(m => m.SettingManagementModule.forLazy()),
   },
+  { path: 'content/:id', component: ContentViewComponent },
+  { path: 'content', component: CreateHtmlContentComponent },
 ];
 
 @NgModule({

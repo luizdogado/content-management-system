@@ -3,6 +3,7 @@ import { HtmlContentService } from '../services/html-content.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ListService, PagedResultDto } from '@abp/ng.core';
 import { ContentPageDto } from '../models/contentPages/contentPageDto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'lib-html-content',
@@ -11,12 +12,11 @@ import { ContentPageDto } from '../models/contentPages/contentPageDto';
   providers: [ListService],
 })
 export class HtmlContentComponent implements OnInit {
-  content: any;
   myEntities = { items: [
   ], totalCount: 3 } as PagedResultDto<ContentPageDto>;
 
   contentForm: FormGroup;
-  constructor(public readonly list: ListService, private service: HtmlContentService) {}
+  constructor(public readonly list: ListService, private service: HtmlContentService, private router: Router) {}
 
   ngOnInit(): void {
     this.getData();
@@ -25,6 +25,13 @@ export class HtmlContentComponent implements OnInit {
   onSubmit(): void {
   }
 
+  navigateToContentView(id: number): void {
+    this.router.navigate(['/content', id]);
+  }
+
+  navigateToContentCreate(id: number | null, valor1: string, valor2: string): void {
+    this.router.navigate(['/content', { id: id, name: valor1, content: valor2}]);
+  }
 
   getData(): void {
     this.service.getAllContent()
@@ -32,4 +39,5 @@ export class HtmlContentComponent implements OnInit {
         this.myEntities = response;
       });
   }
+  
 }

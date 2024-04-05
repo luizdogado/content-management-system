@@ -22,7 +22,7 @@ public class ContentPageRepository : EfCoreRepository<HtmlContentDbContext, Cont
     {
         var query = await GetQueryableAsync();
         var count = query.Count();
-        query.OrderBy(input.Sorting).Skip(input.SkipCount).Take(input.MaxResult);
+        query = query.OrderBy(input.Sorting).Skip(input.SkipCount).Take(input.MaxResult);
         return (count, await query.ToListAsync());
     }
 }

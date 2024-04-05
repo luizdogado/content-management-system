@@ -8,7 +8,7 @@
       </div>
       <div class="text-end col col-md-6">
         <div class="text-lg-end pt-2">
-          <button id="create" class="btn btn-primary" type="button" (click)="navigateToContentCreate(null, '', '')">
+          <button id="create" class="btn btn-primary" type="button" (click)="navigateToContentCreate(null)">
             <i class="fa fa-plus me-1"></i>
             <span>{{ "::New Content" | abpLocalization }}</span>
           </button>
@@ -17,11 +17,25 @@
     </div>
   </div>
   <div class="card-body">
-    <ngx-datatable [rows]="myEntities.items" [count]="myEntities.totalCount" [list]="list" default>
+    <ngx-datatable
+      [rows]="myEntities.items"
+      [count]="myEntities.totalCount"
+      [list]="list"
+      (page)="onPage($event)"
+      default>
       <ngx-datatable-column [name]="'::Actions' | abpLocalization" [maxWidth]="150" [sortable]="false">
         <ng-template let-row="row" ngx-datatable-cell-template>
-              <button class="btn btn-primary" (click)="navigateToContentView(row.id)">{{ '::View' | abpLocalization }}</button>
-              <button class="btn btn-primary" (click)="navigateToContentCreate(row.id, row.name, row.content)">{{ '::Edit' | abpLocalization }}</button>
+          <button class="btn btn-primary btn-sm dropdown-toggle me-1" data-bs-toggle="dropdown" aria-haspopup="true" ngbDropdownToggle>
+            <i class="fa fa-cog me-1"></i>{{ '::Actions' | abpLocalization }}
+          </button>
+          <div class="dropdown-menu dropdown-menu-sm" id="dropdownMenu{{ row.id }}" ngbDropdownMenu aria-labelledby="dropdownMenu{{ row.id }}">
+            <button ngbDropdownItem class="dropdown-item ng-star-inserted" (click)="navigateToContentView(row.id)">
+              {{ '::View Page' | abpLocalization }}
+            </button>
+            <button ngbDropdownItem class="dropdown-item ng-star-inserted"(click)="navigateToContentCreate(row.id)">
+              {{ '::Edit' | abpLocalization }}
+            </button>
+          </div>
         </ng-template>
       </ngx-datatable-column>
       <ngx-datatable-column [name]="'::Id' | abpLocalization" prop="id"></ngx-datatable-column>

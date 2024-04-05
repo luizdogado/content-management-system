@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { RestService } from '@abp/ng.core';
+import { HttpClient , HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ContentPageDto } from '../models/contentPages/contentPageDto';
 
 @Injectable({
   providedIn: 'root',
@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 export class HtmlContentService {
   apiName = 'HtmlContent';
 
-  constructor(private restService: RestService, private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
   private baseUrl = 'https://localhost:44357'; // URL base da sua API
 
-  createOrUpdateContent(content: any): Observable<any> {
+  createOrUpdateContent(content: ContentPageDto): Observable<any> {
     return this.http.post(`${this.baseUrl}/api/html-content/content-page`, content);
   }
 
@@ -20,7 +20,13 @@ export class HtmlContentService {
     return this.http.get(`${this.baseUrl}/api/html-content/content-page/${id}`);
   }
 
-  getAllContent(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/api/html-content/content-page`);
+  getAllContent(skip: number | null, pageSize: number | null): Observable<any> {
+    let params = new HttpParams();
+    if (skip != null)
+      params = params.append("SkipCount", skip);
+
+    if (pageSize != null)
+      params = params.append("MaxResult", pageSize);
+    return this.http.get(`${this.baseUrl}/api/html-content/content-page`, { params });
   }
 }

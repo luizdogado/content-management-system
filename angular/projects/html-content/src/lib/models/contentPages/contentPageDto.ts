@@ -1,5 +1,5 @@
 export interface ContentPageDto {
     content: string;
     name: string;
-    id: number;
+    id: number | null;
 }
